@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hrushikesh | Frontend VLSI Engineer — RTL & Verification</title>
+<title>Hrushikesh Singarapu | Frontend VLSI Engineer — RTL & Verification</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
@@ -16,7 +16,6 @@
   --gray: #8b949e;
 }
 
-/* LIGHT MODE */
 body.light {
   --bg: #ffffff;
   --card: #f6f8fa;
@@ -94,20 +93,6 @@ header.hero {
   background-clip: text;           /* Standard (non-webkit) version – good practice */
   color: transparent;              /* Fallback for some browsers */
 }
-
-.typing {
-  font-size: 1.4rem;
-  color: var(--gray);
-  margin: 1rem 0 2rem;
-  height: 2rem;
-}
-
-.typing::after {
-  content: "|";
-  animation: blink 0.8s infinite;
-}
-
-@keyframes blink { 50% { opacity: 0; } }
 
 .btn {
   padding: 0.9rem 2rem;
@@ -231,9 +216,8 @@ footer {
 </nav>
 
 <header class="hero">
-  <h1>Hrushikesh</h1>
-  <div class="typing" id="typing-text"></div>
-  <p>RTL Design & Functional Verification | Verilog & SystemVerilog</p>
+  <h1>Hrushikesh Singarapu</h1>
+  <p>Frontend VLSI — RTL Design & Functional Verification</p>
   <a href="#projects" class="btn">Explore My Work</a>
 </header>
 
@@ -287,15 +271,16 @@ robust testbenches and simulation.
 
 <section id="contact" class="card">
 <h2>Contact</h2>
-<p>Email: hrushikeshsingarapu@gmail.com</p>
-<p><a href="https://github.com/HrushikeshSingarapu">GitHub</a></p>
-<p><a href="https://linkedin.com/in/hrushikesh-singarapu-22a284291/">LinkedIn</a></p>
+<p><strong>Mobile:</strong> +91-7382236450</p>
+<p><strong>Email:</strong> <a href="mailto:hrushikeshsingarapu@gmail.com">hrushikeshsingarapu@gmail.com</a></p>
+<p><strong>GitHub:</strong> <a href="https://github.com/hrushikeshsingarapu">github.com/hrushikeshsingarapu</a></p>
+<p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/hrushikesh-singarapu-22a284291/">linkedin.com/in/hrushikesh-singarapu-22a284291/</a></p>
 </section>
 
 </div>
 
 <footer>
-<p>© <span id="year"></span> Hrushikesh</p>
+<p>© <span id="year"></span> Hrushikesh Singarapu</p>
 </footer>
 
 <!-- MODALS -->
@@ -303,23 +288,9 @@ robust testbenches and simulation.
 <div id="fifo" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('fifo')">&times;</span><h2>FIFO Verification</h2><p>Verified overflow, underflow, and boundary cases.</p></div></div>
 
 <script>
-// Typing animation
-const phrases = ["RTL Design Enthusiast","Verification Engineer","Future VLSI Professional"];
-let i=0,j=0;
-function type(){ if(j<phrases[i].length){document.getElementById("typing-text").textContent+=phrases[i][j++]; setTimeout(type,80);}
-else setTimeout(erase,2000);}
-function erase(){ if(j>0){document.getElementById("typing-text").textContent=phrases[i].substring(0,--j); setTimeout(erase,40);}
-else {i=(i+1)%phrases.length; setTimeout(type,500);}}
-type();
-
-// Theme
 function toggleTheme(){ document.body.classList.toggle("light"); }
-
-// Modal
 function openModal(id){ document.getElementById(id).style.display="flex"; }
 function closeModal(id){ document.getElementById(id).style.display="none"; }
-
-// Year
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 

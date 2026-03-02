@@ -1,81 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hrushikesh | Frontend VLSI Engineer — RTL & Verification</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <style>
-    :root {
-      --bg: #0d1117;
-      --card: #161b22;
-      --text: #e6edf3;
-      --accent: #58a6ff;
-      --accent-dark: #388bfd;
-      --gray: #8b949e;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hrushikesh | Frontend VLSI Engineer — RTL & Verification</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-    body.light {
-      --bg: #ffffff;
-      --card: #f6f8fa;
-      --text: #24292f;
-      --accent: #0969da;
-      --accent-dark: #0550ae;
-      --gray: #57606a;
-    }
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --text: #e6edf3;
+  --accent: #58a6ff;
+  --accent-dark: #388bfd;
+  --gray: #8b949e;
+}
 
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      transition: background 0.4s, color 0.4s;
-    }
+/* LIGHT MODE */
+body.light {
+  --bg: #ffffff;
+  --card: #f6f8fa;
+  --text: #24292f;
+  --accent: #0969da;
+  --accent-dark: #0550ae;
+  --gray: #57606a;
+}
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(13,17,23,0.85);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      padding: 1rem;
-      text-align: center;
-      border-bottom: 1px solid rgba(88,166,255,0.15);
-    }
+* { margin:0; padding:0; box-sizing:border-box; }
 
-    nav a {
-      color: var(--accent);
-      margin: 0 1.2rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(88,166,255,0.08), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(88,166,255,0.06), transparent 40%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.4s, color 0.4s;
+}
 
-    nav a:hover, nav a.active { color: white; }
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(13,17,23,0.75);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(88,166,255,0.15);
+}
 
-    .theme-toggle {
-      background: none;
-      border: none;
-      color: var(--accent);
-      font-size: 1.3rem;
-      cursor: pointer;
-      margin-left: 1.5rem;
-    }
+body.light nav { background: rgba(255,255,255,0.75); }
 
-    header.hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 1.5rem;
-      background: linear-gradient(135deg, #0d1117 0%, #0a0e14 100%);
-    }
+nav a {
+  color: var(--accent);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-    .hero h1 {
+nav a:hover, nav a.active { color: white; }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* HERO */
+header.hero {
+  min-height: 100vh;
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(13,17,23,0.95), rgba(13,17,23,0.85)),
+    radial-gradient(circle at top, rgba(88,166,255,0.15), transparent 60%);
+}
+
+.hero h1 {
   font-size: clamp(2.8rem, 8vw, 5.5rem);
   margin-bottom: 0.8rem;
   background: linear-gradient(90deg, var(--accent), #79c0ff);
@@ -85,368 +95,229 @@
   color: transparent;              /* Fallback for some browsers */
 }
 
-    .typing {
-      font-size: 1.5rem;
-      color: var(--gray);
-      margin: 1rem 0 2rem;
-      height: 2rem;
-    }
+.typing {
+  font-size: 1.4rem;
+  color: var(--gray);
+  margin: 1rem 0 2rem;
+  height: 2rem;
+}
 
-    .typing::after {
-      content: "|";
-      animation: blink 0.8s infinite;
-    }
+.typing::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+}
 
-    @keyframes blink { 50% { opacity: 0; } }
+@keyframes blink { 50% { opacity: 0; } }
 
-    .btn {
-      padding: 0.9rem 2rem;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
+.btn {
+  padding: 0.9rem 2rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
 
-    .btn:hover { background: var(--accent-dark); transform: translateY(-3px); }
+.btn:hover { background: var(--accent-dark); }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.2rem;
+}
 
-    section.card {
-      background: var(--card);
-      padding: 2.5rem;
-      margin: 2rem 0;
-      border-radius: 12px;
-      border: 1px solid rgba(88,166,255,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+/* CARDS */
+section.card {
+  background: var(--card);
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  border: 1px solid rgba(88,166,255,0.1);
+}
 
-    section.card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
 
-    h2 { color: var(--accent); margin-bottom: 1.5rem; font-size: 2.2rem; }
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.8rem;
-      margin-top: 2rem;
-    }
+.skill-item {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(88,166,255,0.08);
+  border-radius: 10px;
+}
 
-    .project-card {
-      background: rgba(22,27,34,0.7);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: all 0.35s;
-      cursor: pointer;
-      border: 1px solid rgba(88,166,255,0.15);
-    }
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
 
-    .project-card:hover {
-      transform: scale(1.04);
-      box-shadow: 0 15px 35px rgba(88,166,255,0.2);
-    }
+.project-card {
+  background: rgba(22,27,34,0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-    .project-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      background: #0d1117;
-    }
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
-    .project-info { padding: 1.5rem; }
+.project-info { padding: 1rem; }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1.5rem;
-    }
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
 
-    .skill-item {
-      text-align: center;
-      padding: 1.2rem;
-      background: rgba(88,166,255,0.08);
-      border-radius: 10px;
-      transition: all 0.3s;
-    }
+.modal-content {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+}
 
-    .skill-item:hover { background: rgba(88,166,255,0.15); transform: translateY(-5px); }
+.close {
+  float: right;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--accent);
+}
 
-    #contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      max-width: 500px;
-      margin: 2rem auto 0;
-    }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray);
+}
 
-    input, textarea {
-      padding: 0.9rem;
-      border: 1px solid var(--gray);
-      border-radius: 6px;
-      background: var(--bg);
-      color: var(--text);
-      font-family: inherit;
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--gray);
-      border-top: 1px solid rgba(88,166,255,0.1);
-    }
-
-    .social-links a {
-      color: var(--accent);
-      font-size: 1.6rem;
-      margin: 0 0.8rem;
-      transition: transform 0.3s;
-    }
-
-    .social-links a:hover { transform: translateY(-5px); }
-
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      z-index: 2000;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    .modal-content {
-      background: var(--card);
-      max-width: 600px;
-      width: 90%;
-      border-radius: 12px;
-      padding: 2rem;
-      position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    .close { position: absolute; top: 1rem; right: 1.5rem; font-size: 2rem; cursor: pointer; color: var(--accent); }
-
-    @media (max-width: 768px) {
-      nav a { margin: 0 0.8rem; font-size: 0.95rem; }
-      .hero h1 { font-size: 3.8rem; }
-    }
-  </style>
+/* MOBILE */
+@media (max-width: 768px) {
+  nav a { font-size: 0.9rem; }
+  .hero h1 { font-size: 3rem; }
+}
+</style>
 </head>
+
 <body>
 
 <nav>
-  <a href="#about" class="nav-link">About</a>
-  <a href="#skills" class="nav-link">Skills</a>
-  <a href="#projects" class="nav-link">Projects</a>
-  <a href="#contact" class="nav-link">Contact</a>
-  <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
 </nav>
 
 <header class="hero">
   <h1>Hrushikesh</h1>
   <div class="typing" id="typing-text"></div>
-  <p style="font-size:1.3rem; margin:1rem 0 2rem; max-width:600px;">
-    ECE enthusiast | RTL Design & Functional Verification | Building reliable digital systems with Verilog & SystemVerilog
-  </p>
-  <a href="#projects" class="btn">Explore My Work →</a>
+  <p>RTL Design & Functional Verification | Verilog & SystemVerilog</p>
+  <a href="#projects" class="btn">Explore My Work</a>
 </header>
 
 <div class="container">
 
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <p>
-      Passionate ECE student specializing in **Frontend VLSI** — RTL coding, synthesis-friendly design, and advanced functional verification. 
-      I enjoy writing clean, reusable Verilog/SystemVerilog code, building robust testbenches (UVM exposure), and achieving high coverage.
-      Currently exploring high-speed protocols, low-power design techniques, and FPGA prototyping.
-    </p>
-    <p style="margin-top:1rem;">
-      Open to internships, freelance RTL/verification gigs, and full-time opportunities in semiconductor design.
-    </p>
-  </section>
+<section id="about" class="card">
+<h2>About Me</h2>
+<p>
+ECE student focused on Frontend VLSI — RTL design, synthesis-friendly coding,
+and functional verification. I build digital systems and validate them through
+robust testbenches and simulation.
+</p>
+</section>
 
-  <section id="skills" class="card">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-item"><strong>Verilog</strong><br>Expert</div>
-      <div class="skill-item"><strong>SystemVerilog</strong><br>Advanced</div>
-      <div class="skill-item"><strong>UVM</strong><br>Intermediate</div>
-      <div class="skill-item"><strong>ModelSim / Questa</strong><br>Proficient</div>
-      <div class="skill-item"><strong>Vivado / Quartus</strong><br>Good</div>
-      <div class="skill-item"><strong>AXI / APB / UART</strong><br>Hands-on</div>
-      <div class="skill-item"><strong>Git & GitHub</strong><br>Daily use</div>
-      <div class="skill-item"><strong>Linux / TCL</strong><br>Comfortable</div>
-    </div>
-  </section>
+<section id="skills" class="card">
+<h2>Technical Skills</h2>
+<div class="skills-grid">
+<div class="skill-item">Verilog</div>
+<div class="skill-item">SystemVerilog</div>
+<div class="skill-item">RTL Design</div>
+<div class="skill-item">Verification</div>
+<div class="skill-item">ModelSim</div>
+<div class="skill-item">Vivado</div>
+<div class="skill-item">AXI / UART</div>
+<div class="skill-item">Git</div>
+</div>
+</section>
 
-  <section id="projects" class="card">
-    <h2>Projects</h2>
-    <div class="projects-grid">
+<section id="projects" class="card">
+<h2>Projects</h2>
+<div class="projects-grid">
 
-      <div class="project-card" data-modal="modal-uart">
-        <img src="https://via.placeholder.com/600x300/0d1117/58a6ff?text=UART+Waveform" alt="UART"/>
-        <div class="project-info">
-          <h3>Configurable UART TX/RX</h3>
-          <p>Verilog RTL + self-checking testbench with parity, baud rate generator, noise injection</p>
-        </div>
-      </div>
+<div class="project-card" onclick="openModal('uart')">
+<img src="https://via.placeholder.com/600x300/0d1117/58a6ff?text=UART" alt="UART">
+<div class="project-info">
+<h3>UART RTL Design</h3>
+<p>Configurable UART with self-checking testbench.</p>
+</div>
+</div>
 
-      <div class="project-card" data-modal="modal-fifo">
-        <img src="https://via.placeholder.com/600x300/161b22/58a6ff?text=FIFO+Verification" alt="FIFO"/>
-        <div class="project-info">
-          <h3>Asynchronous FIFO Verification</h3>
-          <p>SystemVerilog testbench — gray code pointers, overflow/underflow, almost full/empty checks, 100% coverage</p>
-        </div>
-      </div>
+<div class="project-card" onclick="openModal('fifo')">
+<img src="https://via.placeholder.com/600x300/161b22/58a6ff?text=FIFO" alt="FIFO">
+<div class="project-info">
+<h3>FIFO Verification</h3>
+<p>SystemVerilog testbench with corner-case coverage.</p>
+</div>
+</div>
 
-      <div class="project-card" data-modal="modal-axi">
-        <img src="https://via.placeholder.com/600x300/0d1117/58a6ff?text=AXI4-Lite" alt="AXI"/>
-        <div class="project-info">
-          <h3>AXI4-Lite Master</h3>
-          <p>Supports burst, unaligned transfers, write strobes, error responses — verified with slave model</p>
-        </div>
-      </div>
+</div>
+</section>
 
-      <!-- Add more cards here as needed -->
-
-    </div>
-  </section>
-
-  <section id="contact" class="card">
-    <h2>Get In Touch</h2>
-    <p>Looking for collaboration or have a VLSI challenge? Reach out!</p>
-
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Your Email" required/>
-      <textarea rows="5" placeholder="Message..." required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+<section id="contact" class="card">
+<h2>Contact</h2>
+<p>Email: hrushikeshsingarapu@gmail.com</p>
+<p><a href="https://github.com/HrushikeshSingarapu">GitHub</a></p>
+<p><a href="https://linkedin.com/in/hrushikesh-singarapu-22a284291/">LinkedIn</a></p>
+</section>
 
 </div>
 
 <footer>
-  <div class="social-links">
-    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:yourmail@example.com"><i class="fas fa-envelope"></i></a>
-  </div>
-  <p>© <span id="year"></span> Hrushikesh — Designed with passion for VLSI & clean code</p>
+<p>© <span id="year"></span> Hrushikesh</p>
 </footer>
 
-<!-- Modals -->
-<div id="modal-uart" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>UART RTL Design</h2>
-    <p>Detailed description: Full-duplex UART with 16x oversampling, configurable parity/stop bits, baud rate 9600–115200, error detection.</p>
-    <p><strong>Tools:</strong> Verilog, ModelSim, Vivado</p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername/uart" target="_blank">github.com/yourusername/uart</a></p>
-    <!-- You can embed waveform image here -->
-  </div>
-</div>
-
-<!-- Repeat similar modal structure for other projects -->
+<!-- MODALS -->
+<div id="uart" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('uart')">&times;</span><h2>UART Design</h2><p>Full-duplex UART with configurable baud rate.</p></div></div>
+<div id="fifo" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('fifo')">&times;</span><h2>FIFO Verification</h2><p>Verified overflow, underflow, and boundary cases.</p></div></div>
 
 <script>
 // Typing animation
-const phrases = [
-  "RTL Design Enthusiast",
-  "Functional Verification Engineer",
-  "Verilog / SystemVerilog",
-  "Future VLSI Professional"
-];
-let phraseIndex = 0;
-let charIndex = 0;
-const typingElement = document.getElementById("typing-text");
-
-function type() {
-  if (charIndex < phrases[phraseIndex].length) {
-    typingElement.textContent += phrases[phraseIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, 80);
-  } else {
-    setTimeout(erase, 2000);
-  }
-}
-
-function erase() {
-  if (charIndex > 0) {
-    typingElement.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, 40);
-  } else {
-    phraseIndex = (phraseIndex + 1) % phrases.length;
-    setTimeout(type, 500);
-  }
-}
+const phrases = ["RTL Design Enthusiast","Verification Engineer","Future VLSI Professional"];
+let i=0,j=0;
+function type(){ if(j<phrases[i].length){document.getElementById("typing-text").textContent+=phrases[i][j++]; setTimeout(type,80);}
+else setTimeout(erase,2000);}
+function erase(){ if(j>0){document.getElementById("typing-text").textContent=phrases[i].substring(0,--j); setTimeout(erase,40);}
+else {i=(i+1)%phrases.length; setTimeout(type,500);}}
 type();
 
-// Theme toggle + system preference
-function toggleTheme() {
-  document.body.classList.toggle("light");
-  localStorage.setItem("theme", document.body.classList.contains("light") ? "light" : "dark");
-}
+// Theme
+function toggleTheme(){ document.body.classList.toggle("light"); }
 
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "light" || (!savedTheme && window.matchMedia("(prefers-color-scheme: light)").matches)) {
-  document.body.classList.add("light");
-}
-
-document.querySelector(".theme-toggle").addEventListener("click", toggleTheme);
-
-// Smooth scroll + active nav
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
-  });
-});
-
-window.addEventListener("scroll", () => {
-  document.querySelectorAll("section").forEach(sec => {
-    const top = sec.offsetTop - 100;
-    const height = sec.offsetHeight;
-    if (pageYOffset >= top && pageYOffset < top + height) {
-      document.querySelectorAll(".nav-link").forEach(link => link.classList.remove("active"));
-      document.querySelector(`a[href="#${sec.id}"]`).classList.add("active");
-    }
-  });
-});
-
-// Modal functionality
-document.querySelectorAll(".project-card").forEach(card => {
-  card.addEventListener("click", () => {
-    const modalId = card.getAttribute("data-modal");
-    document.getElementById(modalId).style.display = "flex";
-  });
-});
-
-document.querySelectorAll(".modal .close").forEach(close => {
-  close.addEventListener("click", () => {
-    close.closest(".modal").style.display = "none";
-  });
-});
-
-window.addEventListener("click", e => {
-  if (e.target.classList.contains("modal")) e.target.style.display = "none";
-});
-
-// Contact form (demo)
-document.getElementById("contact-form").addEventListener("submit", e => {
-  e.preventDefault();
-  alert("Thanks for reaching out! This is a demo — connect via email or LinkedIn.");
-  e.target.reset();
-});
+// Modal
+function openModal(id){ document.getElementById(id).style.display="flex"; }
+function closeModal(id){ document.getElementById(id).style.display="none"; }
 
 // Year
 document.getElementById("year").textContent = new Date().getFullYear();

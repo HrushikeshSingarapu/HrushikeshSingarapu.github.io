@@ -76,12 +76,14 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.8rem, 8vw, 5.5rem);
-      margin-bottom: 0.8rem;
-      background: linear-gradient(90deg, var(--accent), #79c0ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  font-size: clamp(2.8rem, 8vw, 5.5rem);
+  margin-bottom: 0.8rem;
+  background: linear-gradient(90deg, var(--accent), #79c0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;           /* Standard (non-webkit) version – good practice */
+  color: transparent;              /* Fallback for some browsers */
+}
 
     .typing {
       font-size: 1.5rem;

@@ -1,105 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hrushikesh | Frontend VLSI Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hrushikesh | Frontend VLSI Portfolio</title>
+
+<style>
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --text: #e6edf3;
+    --accent: #58a6ff;
+}
+
+body.light {
+    --bg: #ffffff;
+    --card: #f2f2f2;
+    --text: #111;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: var(--card);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: white;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Hrushikesh</h1>
-        <p>ECE Student | Frontend VLSI Design & Verification</p>
-        <hr>
-    </header>
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+</nav>
 
-    <!-- ABOUT -->
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am an Electronics and Communication Engineering student focused on Frontend VLSI,
-            including RTL design and functional verification. I am building hands-on experience
-            through digital design projects, testbench development, and simulation-based validation.
-        </p>
-    </section>
+<header>
+    <h1>Hrushikesh</h1>
+    <p>Frontend VLSI Design & Verification</p>
+</header>
 
-    <hr>
+<div class="container">
 
-    <!-- SKILLS -->
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Verilog & SystemVerilog</li>
-            <li>RTL Design</li>
-            <li>Functional Verification & Testbench Development</li>
-            <li>Digital Design (FSMs, FIFOs, UART, AXI Basics)</li>
-            <li>Simulation Tools: ModelSim / Questa</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
+<section id="about" class="card">
+<h2>About Me</h2>
+<p>
+ECE student focused on Frontend VLSI, including RTL design and functional verification.
+I build digital systems, write testbenches, and validate designs through simulation.
+</p>
+</section>
 
-    <hr>
+<section id="projects">
+<h2>Projects</h2>
 
-    <!-- PROJECTS -->
-    <section>
-        <h2>Projects</h2>
+<div class="card">
+<h3>UART RTL Design</h3>
+<p>Verilog-based UART TX/RX with configurable baud rate and self-checking testbench.</p>
+<a href="https://github.com/yourusername/uart" target="_blank">View on GitHub</a>
+</div>
 
-        <h3>UART RTL Design</h3>
-        <p>
-            Designed a UART transmitter and receiver in Verilog with configurable baud rate.
-            Verified functionality using a self-checking testbench.
-        </p>
+<div class="card">
+<h3>FIFO Verification</h3>
+<p>SystemVerilog testbench verifying overflow, underflow, and boundary cases.</p>
+<a href="https://github.com/yourusername/fifo" target="_blank">View on GitHub</a>
+</div>
 
-        <h3>FIFO Verification Testbench</h3>
-        <p>
-            Developed a SystemVerilog testbench to verify FIFO functionality including overflow,
-            underflow, and boundary conditions.
-        </p>
+<div class="card">
+<h3>AXI Master Module</h3>
+<p>AXI4-Lite master supporting read/write transactions and byte strobes.</p>
+<a href="https://github.com/yourusername/axi" target="_blank">View on GitHub</a>
+</div>
 
-        <h3>AXI Master Module</h3>
-        <p>
-            Implemented an AXI4-Lite master module supporting read and write transactions,
-            with proper handshake and byte strobe handling.
-        </p>
+</section>
 
-    </section>
+<section id="contact" class="card">
+<h2>Contact</h2>
+<p>Email: yourmail@example.com</p>
+<p><a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a></p>
+<p><a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+</section>
 
-    <hr>
+</div>
 
-    <!-- GITHUB -->
-    <section>
-        <h2>GitHub</h2>
-        <p>View my repositories:</p>
-        <p><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></p>
-    </section>
+<footer>
+<p>© 2026 Hrushikesh</p>
+</footer>
 
-    <hr>
-
-    <!-- RESUME -->
-    <section>
-        <h2>Resume</h2>
-        <p><a href="resume.pdf" target="_blank">Download Resume</a></p>
-        <p>(Upload resume.pdf to this repository to enable download)</p>
-    </section>
-
-    <hr>
-
-    <!-- CONTACT -->
-    <section>
-        <h2>Contact</h2>
-        <p>Email: yourmail@example.com</p>
-        <p>
-            <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
-        </p>
-    </section>
-
-    <hr>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Hrushikesh</p>
-    </footer>
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>
